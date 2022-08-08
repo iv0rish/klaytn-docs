@@ -13,7 +13,11 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1.5.0
         with:
-          fail: true
+          fail: false
+          args: --max-concurrency 20
+          format: json
+          output: lychee/out.md
+          jobSummary: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
