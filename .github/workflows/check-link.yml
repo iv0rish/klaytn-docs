@@ -6,6 +6,9 @@ on:
 jobs:
   linkChecker:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
